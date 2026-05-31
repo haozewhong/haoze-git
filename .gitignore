@@ -1,6 +1,7 @@
 *.exe
 *.o
-.DS_StoreTest C++/Exercise/
+.DS_Store
+Test C++/Exercise/
 Test C++/example.txt
 Test C++/helloworld
 Test C++/helloworld.cpp
