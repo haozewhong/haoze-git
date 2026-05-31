@@ -1,3 +1,9 @@
 *.exe
 *.o
-.DS_Store
+.DS_StoreTest C++/Exercise/
+Test C++/example.txt
+Test C++/helloworld
+Test C++/helloworld.cpp
+Tutorial_Revision/
+main
+main.cpp
