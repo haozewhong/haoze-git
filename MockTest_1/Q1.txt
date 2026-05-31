@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Write your MovieTicket class here
+
+int main()
+{
+    MovieTicket t1("Avengers", 2, 18.50);
+    MovieTicket t2("Frozen", 3, 15.00);
+
+    cout << "Ticket 1" << endl;
+    t1.calculateTotal();
+    t1.print();
+
+    cout << endl;
+
+    cout << "Ticket 2" << endl;
+    t2.calculateTotal();
+    t2.print();
+
+    return 0;
+}
+
+Expected Output
+[
+Ticket 1
+Movie: Avengers
+Quantity: 2
+Total: RM37
+
+Ticket 2
+Movie: Frozen
+Quantity: 3
+Total: RM45
+]
+
+a. write class code
+class MovieTicket{
+    private:
+        string movieName;
+        int quantity;
+        double price;
+        double total;
+
+    public:
+        MovieTicket(string name, int q, double p){
+            movieName = name;
+            quantity = q;
+            price = p;
+            total = 0.0;
+        }
+        void calculateTotal(){
+            total = quantity * price;
+        }
+        void print(){
+            cout << "Movie: " << movieName <<endl;
+            cout << "Quantity: " << quantity <<endl;
+            cout << "Total: RM" << total <<endl;
+        }
+};

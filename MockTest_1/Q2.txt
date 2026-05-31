@@ -1,0 +1,62 @@
+Complete the C++ code by implementing the class Product.
+You must not modify the main() function.
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Write your Product class here
+
+int main()
+{
+    Product p1("Notebook", 4, 3.50);
+    Product p2("Pen", 10, 1.20);
+
+    p1.applyDiscount(2.00);
+    p2.applyDiscount(1.50);
+
+    cout << "Product 1" << endl;
+    p1.print();
+
+    cout << endl;
+
+    cout << "Product 2" << endl;
+    p2.print();
+
+    return 0;
+}
+Expected output:
+Product 1
+Name: Notebook
+Quantity: 4
+Final Total: RM12
+
+Product 2
+Name: Pen
+Quantity: 10
+Final Total: RM10.5
+Write only the Product class code.
+
+class Product{
+    private:
+        string productName;
+        int quantity;
+        double price;
+        double total;
+
+    public:
+        Product(string name, int q, double p){
+            productName = name;
+            quantity = q;
+            price = p;
+            total = 0.0;
+        }
+        void applyDiscount(double discount){
+            total = (quantity * price) - discount;
+            
+        }
+        void print(){
+            cout << "Name: " << productName <<endl;
+            cout << "Quantity: " << quantity <<endl;
+            cout << "Final Total: RM" << total <<endl;
+        }
+};
